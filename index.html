@@ -5,17 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
     <title>About Me!</title>
   </head>
-  <body>
-    <h1>How Well Do You Know Me?</h1>
-    <h2>The Aim;</h2>
 
-    <p>
+  <body>
+
+    <div class="header--wrapper"><h1>How Well Do You Know Me?</h1>
+      <h2>The Aim;</h2>
+      <p>
       The aim of the game is to see how many questions you can answer correct
       about me. Do you think your ready for the challenge? If so....LETS GO!
-    </p>
-
-    <script src="app.js"></script>
+      </p>
+    </div>
+    <div class="questionsWrapper">
+      <script>question1()</script>
+      <script>question2()</script>
+      <script>question3()</script>
+      <script>question4()</script>
+      <script>guessNumber()</script>
+    </div>
   </body>
 </html>
