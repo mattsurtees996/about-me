@@ -18,7 +18,6 @@ if (question == true) {
 
 //question one ------------------------------------------------------------------------------
 function question1() {
-
   let football = prompt("What football team do i support?").toLowerCase();
   if (
     football == "tottenham hotspurs" ||
@@ -26,38 +25,42 @@ function question1() {
     football == "tottenham"
   ) {
     alert("WELL DONE, you got one right....so far! Keep going!");
-    document.write("<p>You knew what football team I liked</p>")
-    userPoints++
+    document.write("<p>You knew what football team I liked</p>");
+    userPoints++;
   } else if (football == "arsenal" || football == "gooners") {
     alert("I guess somebody has too!");
   } else {
-    alert("Something PC");
-    document.write("<p>You know nothing about football!</p>")
+    alert("You know nothing about me!");
+    document.write("<p>You know nothing about football!</p>");
   }
 }
 
 // question two ------------------------------------------------------------
 function question2() {
-
   let foodQuestion = prompt("What is my go to cuisine?").toLowerCase();
 
   let foodsILike = ["thai", "chinese", "pizza", "pasta"];
 
-  for (let i = 0; i < foodsILike.length; i++) { //is two correct
+  for (let i = 0; i < foodsILike.length; i++) {
+    //is two correct
     if (foodQuestion == foodsILike[i]) {
-      alert("Yes I love " + foodQuestion + "!" + " You're doing well, let's see if you can keep it going....");
+      alert(
+        "Yes I love " +
+          foodQuestion +
+          "!" +
+          " You're doing well, let's see if you can keep it going...."
+      );
       alert("Have you kept track of how many you go right?👀");
       userPoints++;
       break;
     }
-    alert("Food answer incorrect.");
+    alert("You ain't a foodie like me!");
     break;
   }
 }
 
 // question three ---------------------------------------------------------------------------
 function question3() {
-
   let sports = confirm("Did i used to play rugby for Norwich?");
 
   if (sports == true) {
@@ -68,7 +71,6 @@ function question3() {
   }
 }
 // question four ---------------------------------------------------------------------------
- //question 4
 
 function question4() {
   let question4 = confirm("Have I done a marathon?"); //is four correct
@@ -88,15 +90,61 @@ function guessNumber() {
   // let correctNumber = 5;
 
   if (userAnswer < correctNumber) {
-    alert("Too low! Try again bozo");
-    return false;
+    alert("Too low! Better luck on the next question");
   } else if (userAnswer > correctNumber) {
-    alert("Too high! Try again bozo");
-    return false;
-  } else if (isNaN(userAnswer)) {
-    alert("You didn't enter a number!");
-  } else {
+    alert("Too high! lets keep going....");
+  } else if (userAnswer === correctNumber) {
     alert("You guessed correctly. Well done!");
     userPoints++;
-  } 
+  } else {
+    alert("You didn't enter a number!");
+  }
+}
+
+// Question 6 -------------------------------------------------------------------
+
+function guessWhiskey() {
+  //   let = prompt("What is one of my favourite whiskeys?");
+
+  //   let answers = ["makers mark", "bulleit", "angels envy"];
+  //   let userAttempts = 6;
+
+  //   for (let i = 0; i <= userAttempts.length; i++) {
+  //     let userAnswer = prompt(
+  //       "What is one of my favourite whiskey?"
+  //     ).toLowerCase();
+  //     // for (let i = 0; i <= answers.length; i++) {
+  //     //   if (userAnswer == answers[i]) {
+  //     //     correct = true;
+  //     //   }
+
+  //     if (
+  //       userAnswer === answers[0] ||
+  //       userAnswer === answers[1] ||
+  //       userAnswer === answers[2]
+  //     ) {
+  //       alert("Well done, your actually paying attention!");
+  //       break;
+  //     } else {
+  //       userAttempts = userAttempts--;
+  //       alert("Thats not corret you have " + userAttempts + " attempts left.");
+  //     }
+  //   }
+
+  let whiskeyQuestion = prompt(
+    "What is one of my favourite whiskeys?"
+  ).toLowerCase();
+
+  let drinksILike = ["makers mark", "bulleit"];
+
+  for (let i = 0; i < drinksILike.length; i++) {
+    //is two correct
+    if (whiskeyQuestion == drinksILike[i]) {
+      alert("Yes I love " + whiskeyQuestion + "!");
+      userPoints++;
+      break;
+    }
+    alert("Are you even paying attention?");
+    break;
+  }
 }
