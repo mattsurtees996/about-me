@@ -31,7 +31,6 @@ function question1() {
     alert("I guess somebody has too!");
   } else {
     alert("You know nothing about me!");
-    document.write("<p>You know nothing about football!</p>");
   }
 }
 
